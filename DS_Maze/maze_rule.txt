@@ -1,0 +1,19 @@
+Size: 2 × 101 × 101 (a 2-story 101 by 101 maze space including walls)
+Direction: X-axis, Y-axis, and Z-axis.
+Initial position: 
+ Romeo: (0,1,1) ( i.e., 1F position (1,1) )
+ Juliet: (1,99,99) ( i.e., 2F position (99,99) )
+Symbol representation
+ X : a wall
+ ․ : a road
+ O : a stair
+Walk Rules
+	Romeo: start from (0,1,1) and stop at (1,99,99) of the maze, and it walks according to the rule that Upstairs > Right > Down > Up > 
+Left. Additionally, Romeo will not go downstairs when he hasalready gone upstairs.
+	Juliet: start from (1,99,99) and stop at (0,1,1) of the maze, and it walks according to the rule that Downstairs > Left > Up > Down > Right. Additionally, Juliet will not go upstairs when she hasalready gone downstairs.
+	Romeo goes one step further before Juliet goes one step. 
+	The road traveled will not be visited again unless there is no way to go, which avoids the infinite loop.
+	The stair is a portal, that is, when somebody reaches the stair, goes straight up or down one floor.
+Termination Condition:
+	They meet each other.
+	One of them arrives at its destination first.
